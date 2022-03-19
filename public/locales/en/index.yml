@@ -1,6 +1,7 @@
 iosHint: On iOS, please use the Safari Browser.
 errorClose: Close
-selectCertificate: Select Certificate
+selectCertificate: Connect Account
+connectLinkedIn: Connect LinkedIn Account
 selectCertificateDescription: Please scan the QR code on your certificate or select a screenshot or PDF page with the QR code. 
 stopCamera: Stop Camera
 startCamera: Start Camera
@@ -17,12 +18,13 @@ colorBlue: blue
 colorPurple: purple
 colorTeal: teal
 addToWallet: Add to Wallet
-dataPrivacyDescription: |
-  Data privacy is of special importance when processing health-related data. 
-  In order for you to make an informed decision, please read the
+addWalletDescription: |
+  Add card to your wallet app to have easy access to your LinkedIn Account.
 iAcceptThe: I accept the
 privacyPolicy: Privacy Policy
 createdOnDevice: Created on your device
+easyAccess: Easy access to LinkedIn account link
+contactFreeNetworking: Contact free networking
 openSourceTransparent: Open source and transparent
 hostedInEU: Hosted in the EU
 share: Share
