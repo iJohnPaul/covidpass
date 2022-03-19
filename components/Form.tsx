@@ -101,7 +101,9 @@ function Form(): JSX.Element {
 
     // Show file Dialog
     async function showFileDialog() {
-        inputFile.current.click();
+        alert('i')
+        // inputFile.current.click();
+
     }
 
     // Hide camera view
@@ -209,9 +211,8 @@ function Form(): JSX.Element {
                 <Card step="1" heading={t('index:selectCertificate')} content={
                     <div className="space-y-5">
                         <p>{t('index:selectCertificateDescription')}</p>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                            <Button text={isCameraOpen ? t('index:stopCamera') : t('index:startCamera')} onClick={isCameraOpen ? hideCameraView : showCameraView} />
-                            <Button text={t('index:openFile')} onClick={showFileDialog} />
+                        <div className="grid grid-cols-1 gap-5">
+                            <Button text={t('index:connectLinkedIn')} onClick={showFileDialog} />
                         </div>
 
                         <video id="cameraPreview"
@@ -252,35 +253,19 @@ function Form(): JSX.Element {
                 <Card step="3" heading={t('index:addToWallet')} content={
                     <div className="space-y-5">
                         <p>
-                            {t('index:dataPrivacyDescription')}
-                            <Link href="/privacy">
-                                <a>
-                                    {t('index:privacyPolicy')}
-                                </a>
-                            </Link>.
+                            {t('index:addWalletDescription')}
                         </p>
                         <div>
                             <ul className="list-none">
-                                <Check text={t('createdOnDevice')}/>
+                                <Check text={t('easyAccess')}/>
+                                <Check text={t('contactFreeNetworking')}/>
                                 <Check text={t('openSourceTransparent')}/>
-                                <Check text={t('hostedInEU')}/>
                             </ul>
                         </div>
-                        <label htmlFor="privacy" className="flex flex-row space-x-4 items-center pb-2">
-                            <input type="checkbox" id="privacy" value="privacy" required className="h-5 w-5 outline-none"/>
-                            <p>
-                                {t('index:iAcceptThe')}&nbsp;
-                                <Link href="/privacy">
-                                    <a className="underline">
-                                        {t('index:privacyPolicy')}
-                                    </a>
-                                </Link>.
-                            </p>
-                        </label>
                         <div className="grid grid-cols-1">
                             <button 
                                 type="submit"
-                                className="bg-green-600 hover:bg-green-700 relative focus:outline-none h-20 text-white font-semibold rounded-md items-center flex justify-center">
+                                className="bg-linkedin-blue hover:bg-linkedin-blue-700 relative focus:outline-none h-20 text-white font-semibold rounded-md items-center flex justify-center">
                                 <div id="spin" className={`${loading ? undefined : "hidden"} absolute left-2`}>
                                     <svg className="animate-spin h-5 w-5 ml-4" viewBox="0 0 24 24">
                                         <circle className="opacity-0" cx="12" cy="12" r="10" stroke="currentColor"
@@ -297,7 +282,7 @@ function Form(): JSX.Element {
                 {
                     errorMessage && <Alert isWarning={false} message={errorMessage} onClose={() => setErrorMessage(undefined)}/>
                 }
-                <Card content={
+                {/*<Card content={
                     <div className={`${isShareDialogAvailable ? "md:grid-cols-2": ""} grid-cols-1 grid gap-5`}>
                         {
                             isShareDialogAvailable && <Button text={t('index:share')} onClick={showShareDialog} />
@@ -306,7 +291,7 @@ function Form(): JSX.Element {
                             window.open('https://ko-fi.com/marvinsxtr', '_blank');
                         }} />
                     </div>
-                }/>
+                }/>*/}
             </form>
             <canvas id="canvas" style={{display: "none"}}/>
         </div>
